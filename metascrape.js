@@ -1,8 +1,14 @@
 if (Meteor.isClient) {
  
-  Template.metascrape.helpers({
-    getMeta: function() {
-      //do something
+  Template.metainfo.helpers({
+    name: function() {
+      return Session.get('name');
+    },
+    description: function() {
+      return Session.get('description');
+    },
+    images: function() {
+      return Session.get('images');
     }
   });
  
@@ -15,6 +21,11 @@ if (Meteor.isClient) {
             console.log(error);
           }else{         
             console.log(result);
+            Session.set({
+              name: result.name,
+              description: result.description,
+              images: result.images              
+            });
           }
           //Error is empty if all goes well
           //Result will containt and object like:

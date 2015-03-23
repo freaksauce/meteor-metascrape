@@ -6,9 +6,17 @@
   <h1>Meta Scrape</h1>
  
   {{> metascrape}}
+  
+  {{> metainfo}}
 </body>
  
 <template name="metascrape">
   <input type="text" value="" placeholder="url" id="url">
   <input type="submit" value="Get page meta" id="submit">
+</template>
+
+<template name="metainfo">
+  <h2>Meta</h2>
+  <p>{{name}}</p>
+  <p>{{description}}</p>
 </template>
