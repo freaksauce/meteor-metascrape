@@ -17,11 +17,7 @@
 
 <template name="metainfo">
   <h2>Meta</h2>
-  <p>{{name}}</p>
-  <p>{{description}}</p>
-  <ul>
-  {{#each images}}
-    <li><img src="{{this}}"/></li>
-  {{/each}}
-  </ul>
+  <p>Title - {{title}}</p>
+  <p>Description - {{description}}</p>
+  <p><img src="{{image}}"/></p>
 </template>
